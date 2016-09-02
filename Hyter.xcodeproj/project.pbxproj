@@ -17,7 +17,6 @@
 		7921F5CC1D79F28E004B9702 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; };
 		7921F5CD1D79F28E004B9702 /* Eltaso.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80031D29EEBB0036F239 /* VibrationView.swift */; };
-		79DD80061D29F0D70036F239 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80051D29F0D70036F239 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +87,6 @@
 		790F82DB1D28F417002989B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = ../Eltaso/Eltaso/Eltaso.xcodeproj; sourceTree = "<group>"; };
 		79DD80031D29EEBB0036F239 /* VibrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
-		79DD80051D29F0D70036F239 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +142,6 @@
 				790F82B91D28F417002989B5 /* AppDelegate.swift */,
 				790F82BB1D28F417002989B5 /* ViewController.swift */,
 				79DD80031D29EEBB0036F239 /* VibrationView.swift */,
-				79DD80051D29F0D70036F239 /* Extensions.swift */,
 				790F82BD1D28F417002989B5 /* Main.storyboard */,
 				790F82C01D28F417002989B5 /* Assets.xcassets */,
 				790F82C21D28F417002989B5 /* LaunchScreen.storyboard */,
@@ -340,7 +337,6 @@
 				790F82BC1D28F417002989B5 /* ViewController.swift in Sources */,
 				79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */,
 				790F82BA1D28F417002989B5 /* AppDelegate.swift in Sources */,
-				79DD80061D29F0D70036F239 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
