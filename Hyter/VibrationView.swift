@@ -57,42 +57,15 @@ class VibrationView: UIView {
 		
 	}
 	
-	func animate() {
-		
-		if let squareView = self.squareLayoutView, circleView = self.circleView {
-			UIView.animateWithDuration(0.2, animations: {
-				circleView.backgroundColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1)
-			}, completion: nil)
-			
-			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-				while true {
-					dispatch_async(dispatch_get_main_queue(), {
-						let view = UIView(frame: squareView.bounds)
-						view.layer.cornerRadius = view.frame.width / 2
-						view.layer.borderColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1).CGColor
-						view.layer.borderWidth = 2
-						view.transform = circleView.transform
-						squareView.addSubview(view)
-						UIView.animateWithDuration(1, animations: {
-							view.transform = CGAffineTransformIdentity
-							view.alpha = 0
-							}, completion: { (_) in
-								view.removeFromSuperview()
-						})
-					})
-					NSThread.sleepForTimeInterval(0.2)
-				}
-			})
-			
-		}
-		
-	}
-	
 	func animate(duration: NSTimeInterval, completion: (() -> Void)?) {
 		
-		let duration = duration >= 0.4 ? duration : 0.4
+		let duration = duration > 0.5 ? duration : 0.5
 		
 		if let squareView = self.squareLayoutView, circleView = self.circleView {
+			
+			let circles = Int(duration * 10)
+			let delayUnit: NSTimeInterval = duration / NSTimeInterval(circles)
+			
 			UIView.animateWithDuration(0.1, animations: {
 				circleView.backgroundColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1)
 			}, completion: { (_) in
@@ -103,7 +76,6 @@ class VibrationView: UIView {
 				})
 			})
 			
-			let circles = Int(duration * 5)
 			for i in 0 ..< circles {
 				let view = UIView(frame: squareView.bounds)
 				view.layer.cornerRadius = view.frame.width / 2
@@ -111,7 +83,7 @@ class VibrationView: UIView {
 				view.layer.borderWidth = 2
 				view.transform = circleView.transform
 				squareView.addSubview(view)
-				UIView.animateWithDuration(1, delay: NSTimeInterval(i) * 0.2, options: [], animations: {
+				UIView.animateWithDuration(1, delay: NSTimeInterval(i) * delayUnit, options: [], animations: {
 					view.transform = CGAffineTransformIdentity
 					view.alpha = 0
 				}, completion: { (_) in
@@ -121,10 +93,6 @@ class VibrationView: UIView {
 			
 		}
 		
-	}
-	
-	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-		self.animate(0.4, completion: nil)
 	}
 	
 }

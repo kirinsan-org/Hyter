@@ -8,19 +8,31 @@
 
 import UIKit
 import AudioToolbox
+import Eltaso
 
 class ViewController: UIViewController {
-
+	
+	private var vibrationView: VibrationView!
+	
+	private let kirinsanRhythm = [
+		1, 0, 1, 0, //きりんさん
+		1, 0, 1, 0, //きりんさん
+		1, 0, 1, 0, //首が長いの
+		1, 1, 1, 0, //ねー
+	]
+	private let codeLength: NSTimeInterval = 0.5
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		let view = VibrationView(frame: self.view.bounds)
 		view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		self.vibrationView = view
 		self.view.addSubview(view)
 		
 	}
-
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -29,65 +41,81 @@ class ViewController: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		vibration()
-		kirinsan()
+		self.startVibration()
+		self.startAnimation()
 		
 	}
+	
+}
 
-
-	func vibration() {
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-			while true {
-				dispatch_async(dispatch_get_main_queue(), { 
-					AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-				})
-				NSThread.sleepForTimeInterval(0.4)
-			}
+extension ViewController {
+	
+	private func vibrate() {
+		GCD.runAsynchronizedQueue(with: {
+			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 		})
 	}
 	
-	func animate() {
-		for subview in self.view.subviews {
-			if let view = subview as? VibrationView {
-				view.animate()
+	private func runKirinsanVibration() {
+		
+		self.kirinsanRhythm.forEach { (code) in
+			
+			defer {
+				NSThread.sleepForTimeInterval(self.codeLength)
 			}
-		}
-	}
-	
-	func vibrate(for vibrationCounter: Int) {
-		for _ in 0 ..< vibrationCounter {
-			NSThread.sleepForTimeInterval(0.4)
-			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-		}
-		AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
-	}
-	
-	func animate(for duration: NSTimeInterval, completion: (() -> Void)?) {
-		for subview in self.view.subviews {
-			if let view = subview as? VibrationView {
-				view.animate(duration, completion: completion)
+			
+			if code > 0 {
+				self.vibrate()
 			}
+			
+		}
+		
+	}
+	
+}
+
+extension ViewController {
+	
+	private func animate() {
+		GCD.runAsynchronizedQueue { 
+			self.vibrationView.animate(self.codeLength, completion: nil)
 		}
 	}
 	
-	func kirinsan() {
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+	private func runKirinsanAnimation() {
+		
+		self.kirinsanRhythm.forEach { (code) in
+			
+			defer {
+				NSThread.sleepForTimeInterval(self.codeLength)
+			}
+			
+			if code > 0 {
+				self.animate()
+			}
+			
+		}
+		
+	}
+	
+}
+
+extension ViewController {
+	
+	func startVibration() {
+		GCD.runAsynchronizedQueue(at: .Global(priority: .Default)) { 
 			while true {
-				dispatch_async(dispatch_get_main_queue()) {
-					self.animate(for: 0.4, completion: {
-						NSThread.sleepForTimeInterval(0.4)
-						self.animate(for: 1.2, completion: {
-							NSThread.sleepForTimeInterval(0.4)
-							self.animate(for: 0.4, completion: {
-								NSThread.sleepForTimeInterval(0.4)
-								self.animate(for: 2.8, completion: nil)
-							})
-						})
-					})
-				}
-				NSThread.sleepForTimeInterval(6.4)
+				self.runKirinsanVibration()
 			}
 		}
 	}
 	
+	func startAnimation() {
+		GCD.runAsynchronizedQueue(at: .Global(priority: .Default)) { 
+			while true {
+				self.runKirinsanAnimation()
+			}
+		}
+	}
+		
 }
