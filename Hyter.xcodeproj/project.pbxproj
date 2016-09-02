@@ -14,6 +14,8 @@
 		790F82C41D28F417002989B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790F82C21D28F417002989B5 /* LaunchScreen.storyboard */; };
 		790F82CF1D28F417002989B5 /* HyterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82CE1D28F417002989B5 /* HyterTests.swift */; };
 		790F82DA1D28F417002989B5 /* HyterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82D91D28F417002989B5 /* HyterUITests.swift */; };
+		7921F5CC1D79F28E004B9702 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; };
+		7921F5CD1D79F28E004B9702 /* Eltaso.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80031D29EEBB0036F239 /* VibrationView.swift */; };
 		79DD80061D29F0D70036F239 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80051D29F0D70036F239 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +35,42 @@
 			remoteGlobalIDString = 790F82B51D28F417002989B5;
 			remoteInfo = Hyter;
 		};
+		7921F5C81D79F285004B9702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79E14E821D2B90DA00AF6EE4;
+			remoteInfo = Eltaso;
+		};
+		7921F5CA1D79F285004B9702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79E14E8C1D2B90DA00AF6EE4;
+			remoteInfo = EltasoTests;
+		};
+		7921F5CE1D79F28E004B9702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 79E14E811D2B90DA00AF6EE4;
+			remoteInfo = Eltaso;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7921F5D01D79F28E004B9702 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7921F5CD1D79F28E004B9702 /* Eltaso.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		790F82B61D28F417002989B5 /* Hyter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +86,7 @@
 		790F82D51D28F417002989B5 /* HyterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F82D91D28F417002989B5 /* HyterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyterUITests.swift; sourceTree = "<group>"; };
 		790F82DB1D28F417002989B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = ../Eltaso/Eltaso/Eltaso.xcodeproj; sourceTree = "<group>"; };
 		79DD80031D29EEBB0036F239 /* VibrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
 		79DD80051D29F0D70036F239 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7921F5CC1D79F28E004B9702 /* Eltaso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,7 @@
 		790F82AD1D28F417002989B5 = {
 			isa = PBXGroup;
 			children = (
+				7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */,
 				790F82B81D28F417002989B5 /* Hyter */,
 				790F82CD1D28F417002989B5 /* HyterTests */,
 				790F82D81D28F417002989B5 /* HyterUITests */,
@@ -131,6 +171,15 @@
 			path = HyterUITests;
 			sourceTree = "<group>";
 		};
+		7921F5C41D79F285004B9702 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7921F5C91D79F285004B9702 /* Eltaso.framework */,
+				7921F5CB1D79F285004B9702 /* EltasoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,10 +190,12 @@
 				790F82B21D28F417002989B5 /* Sources */,
 				790F82B31D28F417002989B5 /* Frameworks */,
 				790F82B41D28F417002989B5 /* Resources */,
+				7921F5D01D79F28E004B9702 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7921F5CF1D79F28E004B9702 /* PBXTargetDependency */,
 			);
 			name = Hyter;
 			productName = Hyter;
@@ -199,6 +250,7 @@
 				TargetAttributes = {
 					790F82B51D28F417002989B5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KC8N9BMQJY;
 					};
 					790F82C91D28F417002989B5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -221,6 +273,12 @@
 			mainGroup = 790F82AD1D28F417002989B5;
 			productRefGroup = 790F82B71D28F417002989B5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7921F5C41D79F285004B9702 /* Products */;
+					ProjectRef = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				790F82B51D28F417002989B5 /* Hyter */,
@@ -229,6 +287,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7921F5C91D79F285004B9702 /* Eltaso.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Eltaso.framework;
+			remoteRef = 7921F5C81D79F285004B9702 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7921F5CB1D79F285004B9702 /* EltasoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EltasoTests.xctest;
+			remoteRef = 7921F5CA1D79F285004B9702 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		790F82B41D28F417002989B5 /* Resources */ = {
@@ -297,6 +372,11 @@
 			isa = PBXTargetDependency;
 			target = 790F82B51D28F417002989B5 /* Hyter */;
 			targetProxy = 790F82D61D28F417002989B5 /* PBXContainerItemProxy */;
+		};
+		7921F5CF1D79F28E004B9702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eltaso;
+			targetProxy = 7921F5CE1D79F28E004B9702 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -409,10 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hyter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Hyter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +504,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Hyter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.Hyter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
