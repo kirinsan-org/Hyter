@@ -14,6 +14,8 @@
 		790F82C41D28F417002989B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790F82C21D28F417002989B5 /* LaunchScreen.storyboard */; };
 		790F82CF1D28F417002989B5 /* HyterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82CE1D28F417002989B5 /* HyterTests.swift */; };
 		790F82DA1D28F417002989B5 /* HyterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82D91D28F417002989B5 /* HyterUITests.swift */; };
+		79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80031D29EEBB0036F239 /* VibrationView.swift */; };
+		79DD80061D29F0D70036F239 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80051D29F0D70036F239 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		790F82D51D28F417002989B5 /* HyterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F82D91D28F417002989B5 /* HyterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyterUITests.swift; sourceTree = "<group>"; };
 		790F82DB1D28F417002989B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DD80031D29EEBB0036F239 /* VibrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
+		79DD80051D29F0D70036F239 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				790F82B91D28F417002989B5 /* AppDelegate.swift */,
 				790F82BB1D28F417002989B5 /* ViewController.swift */,
+				79DD80031D29EEBB0036F239 /* VibrationView.swift */,
+				79DD80051D29F0D70036F239 /* Extensions.swift */,
 				790F82BD1D28F417002989B5 /* Main.storyboard */,
 				790F82C01D28F417002989B5 /* Assets.xcassets */,
 				790F82C21D28F417002989B5 /* LaunchScreen.storyboard */,
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				790F82BC1D28F417002989B5 /* ViewController.swift in Sources */,
+				79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */,
 				790F82BA1D28F417002989B5 /* AppDelegate.swift in Sources */,
+				79DD80061D29F0D70036F239 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +492,7 @@
 				790F82E01D28F417002989B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		790F82E11D28F417002989B5 /* Build configuration list for PBXNativeTarget "HyterTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				790F82E31D28F417002989B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		790F82E41D28F417002989B5 /* Build configuration list for PBXNativeTarget "HyterUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				790F82E61D28F417002989B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
