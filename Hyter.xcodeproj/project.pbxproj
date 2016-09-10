@@ -25,6 +25,7 @@
 		79DFB0441D846A7D00027B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DFB0431D846A7D00027B14 /* Assets.xcassets */; };
 		79DFB0481D846A7D00027B14 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 79DFB02E1D846A7C00027B14 /* Watch.app */; };
 		79DFB0531D8485FD00027B14 /* Kirinsan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0521D8485FD00027B14 /* Kirinsan.swift */; };
+		79DFB0541D8487F700027B14 /* Kirinsan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0521D8485FD00027B14 /* Kirinsan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DFB0541D8487F700027B14 /* Kirinsan.swift in Sources */,
 				79DFB0421D846A7D00027B14 /* ExtensionDelegate.swift in Sources */,
 				79DFB0401D846A7D00027B14 /* InterfaceController.swift in Sources */,
 			);
