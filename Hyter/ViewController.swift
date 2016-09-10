@@ -8,21 +8,18 @@
 
 import UIKit
 import AudioToolbox
-import Eltaso
 
 class ViewController: UIViewController {
 	
-	fileprivate var vibrationView: VibrationView!
-	
-	fileprivate let kirinsan = Kirinsan()
+	private let player = KirinsanPlayer()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let view = VibrationView(frame: self.view.bounds)
+		let view = self.player.vibrationView
+		view.frame = self.view.bounds
 		view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		self.vibrationView = view
 		self.view.addSubview(view)
 		
 	}
@@ -35,83 +32,8 @@ class ViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		self.startVibration()
-		self.startAnimation()
+		self.player.play()
 		
 	}
 	
-}
-
-extension ViewController {
-	
-	private func vibrate() {
-		DispatchQueue.main.async {
-			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-		}
-	}
-	
-	fileprivate func runKirinsanVibration() {
-		
-		let kirinsan = self.kirinsan
-		kirinsan.rhythm.forEach { (code) in
-			
-			defer {
-				Thread.sleep(forTimeInterval: kirinsan.codeLength)
-			}
-			
-			if code > 0 {
-				self.vibrate()
-			}
-			
-		}
-		
-	}
-	
-}
-
-extension ViewController {
-	
-	private func animate() {
-		DispatchQueue.main.async {
-			self.vibrationView.animate(withDuration: self.kirinsan.codeLength, completion: nil)
-		}
-	}
-	
-	fileprivate func runKirinsanAnimation() {
-		
-		let kirinsan = self.kirinsan
-		kirinsan.rhythm.forEach { (code) in
-			
-			defer {
-				Thread.sleep(forTimeInterval: kirinsan.codeLength)
-			}
-			
-			if code > 0 {
-				self.animate()
-			}
-			
-		}
-		
-	}
-	
-}
-
-extension ViewController {
-	
-	func startVibration() {
-		DispatchQueue.global().async {
-			while true {
-				self.runKirinsanVibration()
-			}
-		}
-	}
-	
-	func startAnimation() {
-		DispatchQueue.global().async {
-			while true {
-				self.runKirinsanAnimation()
-			}
-		}
-	}
-		
 }

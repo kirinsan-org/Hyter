@@ -11,13 +11,13 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 	
-	let kirinsan = Kirinsan()
+	let player = KirinsanPlayer()
 	
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-		self.startVibration()
+		self.player.play()
 		
     }
     
@@ -31,43 +31,4 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-}
-
-extension InterfaceController {
-	
-	private func vibrate() {
-		DispatchQueue.main.async {
-			WKInterfaceDevice.current().play(.retry)
-		}
-	}
-	
-	fileprivate func runKirinsanVibration() {
-		
-		let kirinsan = self.kirinsan
-		kirinsan.rhythm.forEach { (code) in
-			
-			defer {
-				Thread.sleep(forTimeInterval: kirinsan.codeLength)
-			}
-			
-			if code > 0 {
-				self.vibrate()
-			}
-			
-		}
-		
-	}
-	
-}
-
-extension InterfaceController {
-	
-	func startVibration() {
-		DispatchQueue.global().async {
-			while true {
-				self.runKirinsanVibration()
-			}
-		}
-	}
-	
 }
