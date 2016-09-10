@@ -14,13 +14,7 @@ class ViewController: UIViewController {
 	
 	fileprivate var vibrationView: VibrationView!
 	
-	fileprivate let kirinsanRhythm = [
-		1, 0, 1, 0, //きりんさん
-		1, 0, 1, 0, //きりんさん
-		1, 0, 1, 0, //首が長いの
-		1, 1, 1, 0, //ねー
-	]
-	fileprivate let codeLength: TimeInterval = 0.5
+	fileprivate let kirinsan = Kirinsan()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -58,10 +52,11 @@ extension ViewController {
 	
 	fileprivate func runKirinsanVibration() {
 		
-		self.kirinsanRhythm.forEach { (code) in
+		let kirinsan = self.kirinsan
+		kirinsan.rhythm.forEach { (code) in
 			
 			defer {
-				Thread.sleep(forTimeInterval: self.codeLength)
+				Thread.sleep(forTimeInterval: kirinsan.codeLength)
 			}
 			
 			if code > 0 {
@@ -78,16 +73,17 @@ extension ViewController {
 	
 	private func animate() {
 		DispatchQueue.main.async {
-			self.vibrationView.animate(withDuration: self.codeLength, completion: nil)
+			self.vibrationView.animate(withDuration: self.kirinsan.codeLength, completion: nil)
 		}
 	}
 	
 	fileprivate func runKirinsanAnimation() {
 		
-		self.kirinsanRhythm.forEach { (code) in
+		let kirinsan = self.kirinsan
+		kirinsan.rhythm.forEach { (code) in
 			
 			defer {
-				Thread.sleep(forTimeInterval: self.codeLength)
+				Thread.sleep(forTimeInterval: kirinsan.codeLength)
 			}
 			
 			if code > 0 {

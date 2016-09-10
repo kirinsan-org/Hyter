@@ -24,6 +24,7 @@
 		79DFB0421D846A7D00027B14 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0411D846A7D00027B14 /* ExtensionDelegate.swift */; };
 		79DFB0441D846A7D00027B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DFB0431D846A7D00027B14 /* Assets.xcassets */; };
 		79DFB0481D846A7D00027B14 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 79DFB02E1D846A7C00027B14 /* Watch.app */; };
+		79DFB0531D8485FD00027B14 /* Kirinsan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0521D8485FD00027B14 /* Kirinsan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		79DFB0411D846A7D00027B14 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		79DFB0431D846A7D00027B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79DFB0451D846A7D00027B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DFB0521D8485FD00027B14 /* Kirinsan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kirinsan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				790F82B91D28F417002989B5 /* AppDelegate.swift */,
 				790F82BB1D28F417002989B5 /* ViewController.swift */,
 				79DD80031D29EEBB0036F239 /* VibrationView.swift */,
+				79DFB0521D8485FD00027B14 /* Kirinsan.swift */,
 				790F82BD1D28F417002989B5 /* Main.storyboard */,
 				790F82C01D28F417002989B5 /* Assets.xcassets */,
 				790F82C21D28F417002989B5 /* LaunchScreen.storyboard */,
@@ -486,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DFB0531D8485FD00027B14 /* Kirinsan.swift in Sources */,
 				790F82BC1D28F417002989B5 /* ViewController.swift in Sources */,
 				79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */,
 				790F82BA1D28F417002989B5 /* AppDelegate.swift in Sources */,
