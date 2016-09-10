@@ -14,8 +14,6 @@
 		790F82C41D28F417002989B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790F82C21D28F417002989B5 /* LaunchScreen.storyboard */; };
 		790F82CF1D28F417002989B5 /* HyterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82CE1D28F417002989B5 /* HyterTests.swift */; };
 		790F82DA1D28F417002989B5 /* HyterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F82D91D28F417002989B5 /* HyterUITests.swift */; };
-		7921F5CC1D79F28E004B9702 /* Eltaso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; };
-		7921F5CD1D79F28E004B9702 /* Eltaso.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7921F5C91D79F285004B9702 /* Eltaso.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD80031D29EEBB0036F239 /* VibrationView.swift */; };
 		79DFB0321D846A7C00027B14 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DFB0301D846A7C00027B14 /* Interface.storyboard */; };
 		79DFB0341D846A7C00027B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DFB0331D846A7C00027B14 /* Assets.xcassets */; };
@@ -23,9 +21,10 @@
 		79DFB0401D846A7D00027B14 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB03F1D846A7D00027B14 /* InterfaceController.swift */; };
 		79DFB0421D846A7D00027B14 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0411D846A7D00027B14 /* ExtensionDelegate.swift */; };
 		79DFB0441D846A7D00027B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DFB0431D846A7D00027B14 /* Assets.xcassets */; };
-		79DFB0481D846A7D00027B14 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 79DFB02E1D846A7C00027B14 /* Watch.app */; };
 		79DFB0531D8485FD00027B14 /* Kirinsan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0521D8485FD00027B14 /* Kirinsan.swift */; };
 		79DFB0541D8487F700027B14 /* Kirinsan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB0521D8485FD00027B14 /* Kirinsan.swift */; };
+		79DFB05D1D848EE800027B14 /* KirinsanPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB05C1D848EE800027B14 /* KirinsanPlayer.swift */; };
+		79DFB05F1D848FB900027B14 /* KirinsanPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFB05C1D848EE800027B14 /* KirinsanPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,27 +41,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 790F82B51D28F417002989B5;
 			remoteInfo = Hyter;
-		};
-		7921F5C81D79F285004B9702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 79E14E821D2B90DA00AF6EE4;
-			remoteInfo = Eltaso;
-		};
-		7921F5CA1D79F285004B9702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 79E14E8C1D2B90DA00AF6EE4;
-			remoteInfo = EltasoTests;
-		};
-		7921F5CE1D79F28E004B9702 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 79E14E811D2B90DA00AF6EE4;
-			remoteInfo = Eltaso;
 		};
 		79DFB03C1D846A7D00027B14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,7 +65,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7921F5CD1D79F28E004B9702 /* Eltaso.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +86,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				79DFB0481D846A7D00027B14 /* Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,7 +106,6 @@
 		790F82D51D28F417002989B5 /* HyterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F82D91D28F417002989B5 /* HyterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyterUITests.swift; sourceTree = "<group>"; };
 		790F82DB1D28F417002989B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eltaso.xcodeproj; path = ../Eltaso/Eltaso/Eltaso.xcodeproj; sourceTree = "<group>"; };
 		79DD80031D29EEBB0036F239 /* VibrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
 		79DFB02E1D846A7C00027B14 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DFB0311D846A7C00027B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -142,6 +117,7 @@
 		79DFB0431D846A7D00027B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79DFB0451D846A7D00027B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79DFB0521D8485FD00027B14 /* Kirinsan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kirinsan.swift; sourceTree = "<group>"; };
+		79DFB05C1D848EE800027B14 /* KirinsanPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KirinsanPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7921F5CC1D79F28E004B9702 /* Eltaso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +155,6 @@
 		790F82AD1D28F417002989B5 = {
 			isa = PBXGroup;
 			children = (
-				7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */,
 				790F82B81D28F417002989B5 /* Hyter */,
 				790F82CD1D28F417002989B5 /* HyterTests */,
 				790F82D81D28F417002989B5 /* HyterUITests */,
@@ -209,6 +183,7 @@
 				790F82BB1D28F417002989B5 /* ViewController.swift */,
 				79DD80031D29EEBB0036F239 /* VibrationView.swift */,
 				79DFB0521D8485FD00027B14 /* Kirinsan.swift */,
+				79DFB05C1D848EE800027B14 /* KirinsanPlayer.swift */,
 				790F82BD1D28F417002989B5 /* Main.storyboard */,
 				790F82C01D28F417002989B5 /* Assets.xcassets */,
 				790F82C21D28F417002989B5 /* LaunchScreen.storyboard */,
@@ -233,15 +208,6 @@
 				790F82DB1D28F417002989B5 /* Info.plist */,
 			);
 			path = HyterUITests;
-			sourceTree = "<group>";
-		};
-		7921F5C41D79F285004B9702 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7921F5C91D79F285004B9702 /* Eltaso.framework */,
-				7921F5CB1D79F285004B9702 /* EltasoTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		79DFB02F1D846A7C00027B14 /* Watch */ = {
@@ -281,7 +247,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7921F5CF1D79F28E004B9702 /* PBXTargetDependency */,
 				79DFB0471D846A7D00027B14 /* PBXTargetDependency */,
 			);
 			name = Hyter;
@@ -407,12 +372,6 @@
 			mainGroup = 790F82AD1D28F417002989B5;
 			productRefGroup = 790F82B71D28F417002989B5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7921F5C41D79F285004B9702 /* Products */;
-					ProjectRef = 7921F5C31D79F285004B9702 /* Eltaso.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				790F82B51D28F417002989B5 /* Hyter */,
@@ -423,23 +382,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7921F5C91D79F285004B9702 /* Eltaso.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Eltaso.framework;
-			remoteRef = 7921F5C81D79F285004B9702 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7921F5CB1D79F285004B9702 /* EltasoTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EltasoTests.xctest;
-			remoteRef = 7921F5CA1D79F285004B9702 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		790F82B41D28F417002989B5 /* Resources */ = {
@@ -492,6 +434,7 @@
 			files = (
 				79DFB0531D8485FD00027B14 /* Kirinsan.swift in Sources */,
 				790F82BC1D28F417002989B5 /* ViewController.swift in Sources */,
+				79DFB05D1D848EE800027B14 /* KirinsanPlayer.swift in Sources */,
 				79DD80041D29EEBB0036F239 /* VibrationView.swift in Sources */,
 				790F82BA1D28F417002989B5 /* AppDelegate.swift in Sources */,
 			);
@@ -520,6 +463,7 @@
 				79DFB0541D8487F700027B14 /* Kirinsan.swift in Sources */,
 				79DFB0421D846A7D00027B14 /* ExtensionDelegate.swift in Sources */,
 				79DFB0401D846A7D00027B14 /* InterfaceController.swift in Sources */,
+				79DFB05F1D848FB900027B14 /* KirinsanPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,11 +479,6 @@
 			isa = PBXTargetDependency;
 			target = 790F82B51D28F417002989B5 /* Hyter */;
 			targetProxy = 790F82D61D28F417002989B5 /* PBXContainerItemProxy */;
-		};
-		7921F5CF1D79F28E004B9702 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Eltaso;
-			targetProxy = 7921F5CE1D79F28E004B9702 /* PBXContainerItemProxy */;
 		};
 		79DFB03D1D846A7D00027B14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -776,7 +715,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -798,7 +737,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -818,7 +757,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -837,7 +776,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -887,6 +826,7 @@
 				79DFB04C1D846A7D00027B14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79DFB0501D846A7D00027B14 /* Build configuration list for PBXNativeTarget "Watch" */ = {
 			isa = XCConfigurationList;
@@ -895,6 +835,7 @@
 				79DFB04A1D846A7D00027B14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
