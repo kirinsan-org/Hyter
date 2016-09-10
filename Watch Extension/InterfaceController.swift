@@ -16,6 +16,18 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+		
+		DispatchQueue.global().async {
+			
+			while true {
+				DispatchQueue.main.async {
+					WKInterfaceDevice.current().play(.retry)
+				}
+				Thread.sleep(forTimeInterval: 2)
+			}
+			
+		}
+		
     }
     
     override func willActivate() {
