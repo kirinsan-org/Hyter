@@ -50,10 +50,10 @@ class ViewController: UIViewController {
 
 extension ViewController {
 	
-	fileprivate func vibrate() {
-		GCD.runAsynchronizedQueue(with: {
+	private func vibrate() {
+		DispatchQueue.main.async {
 			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-		})
+		}
 	}
 	
 	fileprivate func runKirinsanVibration() {
@@ -76,9 +76,9 @@ extension ViewController {
 
 extension ViewController {
 	
-	fileprivate func animate() {
-		GCD.runAsynchronizedQueue { 
-			self.vibrationView.animate(self.codeLength, completion: nil)
+	private func animate() {
+		DispatchQueue.main.async {
+			self.vibrationView.animate(withDuration: self.codeLength, completion: nil)
 		}
 	}
 	
@@ -103,7 +103,7 @@ extension ViewController {
 extension ViewController {
 	
 	func startVibration() {
-		GCD.runAsynchronizedQueue(at: .Global(priority: .Default)) { 
+		DispatchQueue.global().async {
 			while true {
 				self.runKirinsanVibration()
 			}
@@ -111,7 +111,7 @@ extension ViewController {
 	}
 	
 	func startAnimation() {
-		GCD.runAsynchronizedQueue(at: .Global(priority: .Default)) { 
+		DispatchQueue.global().async {
 			while true {
 				self.runKirinsanAnimation()
 			}

@@ -26,7 +26,7 @@ class VibrationView: UIView {
 		squareLayoutView.addSubview(circleView)
 		self.addSubview(squareLayoutView)
 		
-		circleView.backgroundColor = .white()
+		circleView.backgroundColor = .white
 		
 	}
 	
@@ -57,7 +57,7 @@ class VibrationView: UIView {
 		
 	}
 	
-	func animate(_ duration: TimeInterval, completion: (() -> Void)?) {
+	func animate(withDuration duration: TimeInterval, completion: (() -> Void)?) {
 		
 		let duration = duration > 0.5 ? duration : 0.5
 		
@@ -70,7 +70,7 @@ class VibrationView: UIView {
 				circleView.backgroundColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1)
 			}, completion: { (_) in
 				UIView.animate(withDuration: 0.3, delay: duration - 0.1, options: [], animations: {
-					circleView.backgroundColor = .white()
+					circleView.backgroundColor = .white
 				}, completion: { (_) in
 					completion?()
 				})
@@ -84,7 +84,7 @@ class VibrationView: UIView {
 				view.transform = circleView.transform
 				squareView.addSubview(view)
 				UIView.animate(withDuration: 1, delay: TimeInterval(i) * delayUnit, options: [], animations: {
-					view.transform = CGAffineTransform.identity
+					view.transform = .identity
 					view.alpha = 0
 				}, completion: { (_) in
 					view.removeFromSuperview()
