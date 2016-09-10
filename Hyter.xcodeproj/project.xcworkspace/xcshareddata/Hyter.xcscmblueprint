@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E4E401B197F124A2F44252378BF4DBEFA9EC2BC8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E4E401B197F124A2F44252378BF4DBEFA9EC2BC8" : 9223372036854775807,
+    "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3DBC1498-C3D4-48FC-A412-C2183F5E2D10",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E4E401B197F124A2F44252378BF4DBEFA9EC2BC8" : "Hyter\/",
+    "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E" : "Eltaso\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hyter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Hyter.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/el-hoshino\/Eltaso.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75601FD81BC6ADF58A45D5078CDBC5FAEBCCE86E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kirinsan-org\/Hyter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E4E401B197F124A2F44252378BF4DBEFA9EC2BC8"
+    }
+  ]
+}
