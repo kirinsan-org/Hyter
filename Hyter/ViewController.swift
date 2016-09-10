@@ -12,22 +12,22 @@ import Eltaso
 
 class ViewController: UIViewController {
 	
-	private var vibrationView: VibrationView!
+	fileprivate var vibrationView: VibrationView!
 	
-	private let kirinsanRhythm = [
+	fileprivate let kirinsanRhythm = [
 		1, 0, 1, 0, //きりんさん
 		1, 0, 1, 0, //きりんさん
 		1, 0, 1, 0, //首が長いの
 		1, 1, 1, 0, //ねー
 	]
-	private let codeLength: NSTimeInterval = 0.5
+	fileprivate let codeLength: TimeInterval = 0.5
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		let view = VibrationView(frame: self.view.bounds)
-		view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+		view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		self.vibrationView = view
 		self.view.addSubview(view)
 		
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 	
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
 		self.startVibration()
@@ -50,18 +50,18 @@ class ViewController: UIViewController {
 
 extension ViewController {
 	
-	private func vibrate() {
+	fileprivate func vibrate() {
 		GCD.runAsynchronizedQueue(with: {
 			AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 		})
 	}
 	
-	private func runKirinsanVibration() {
+	fileprivate func runKirinsanVibration() {
 		
 		self.kirinsanRhythm.forEach { (code) in
 			
 			defer {
-				NSThread.sleepForTimeInterval(self.codeLength)
+				Thread.sleep(forTimeInterval: self.codeLength)
 			}
 			
 			if code > 0 {
@@ -76,18 +76,18 @@ extension ViewController {
 
 extension ViewController {
 	
-	private func animate() {
+	fileprivate func animate() {
 		GCD.runAsynchronizedQueue { 
 			self.vibrationView.animate(self.codeLength, completion: nil)
 		}
 	}
 	
-	private func runKirinsanAnimation() {
+	fileprivate func runKirinsanAnimation() {
 		
 		self.kirinsanRhythm.forEach { (code) in
 			
 			defer {
-				NSThread.sleepForTimeInterval(self.codeLength)
+				Thread.sleep(forTimeInterval: self.codeLength)
 			}
 			
 			if code > 0 {

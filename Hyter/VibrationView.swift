@@ -26,7 +26,7 @@ class VibrationView: UIView {
 		squareLayoutView.addSubview(circleView)
 		self.addSubview(squareLayoutView)
 		
-		circleView.backgroundColor = .whiteColor()
+		circleView.backgroundColor = .white()
 		
 	}
 	
@@ -41,7 +41,7 @@ class VibrationView: UIView {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		
-		if let squareview = self.squareLayoutView, circleView = self.circleView {
+		if let squareview = self.squareLayoutView, let circleView = self.circleView {
 			
 			let length = min(self.frame.width, self.frame.height)
 			squareview.frame.size = CGSize(width: length, height: length)
@@ -51,26 +51,26 @@ class VibrationView: UIView {
 			circleView.layer.cornerRadius = circleView.frame.width / 2
 			circleView.clipsToBounds = true
 			
-			circleView.transform = CGAffineTransformMakeScale(0.5, 0.5)
+			circleView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
 			
 		}
 		
 	}
 	
-	func animate(duration: NSTimeInterval, completion: (() -> Void)?) {
+	func animate(_ duration: TimeInterval, completion: (() -> Void)?) {
 		
 		let duration = duration > 0.5 ? duration : 0.5
 		
-		if let squareView = self.squareLayoutView, circleView = self.circleView {
+		if let squareView = self.squareLayoutView, let circleView = self.circleView {
 			
 			let circles = Int(duration * 10)
-			let delayUnit: NSTimeInterval = duration / NSTimeInterval(circles)
+			let delayUnit: TimeInterval = duration / TimeInterval(circles)
 			
-			UIView.animateWithDuration(0.1, animations: {
+			UIView.animate(withDuration: 0.1, animations: {
 				circleView.backgroundColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1)
 			}, completion: { (_) in
-				UIView.animateWithDuration(0.3, delay: duration - 0.1, options: [], animations: {
-					circleView.backgroundColor = .whiteColor()
+				UIView.animate(withDuration: 0.3, delay: duration - 0.1, options: [], animations: {
+					circleView.backgroundColor = .white()
 				}, completion: { (_) in
 					completion?()
 				})
@@ -79,12 +79,12 @@ class VibrationView: UIView {
 			for i in 0 ..< circles {
 				let view = UIView(frame: squareView.bounds)
 				view.layer.cornerRadius = view.frame.width / 2
-				view.layer.borderColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1).CGColor
+				view.layer.borderColor = UIColor(red: 0.545, green: 0.827, blue: 1, alpha: 1).cgColor
 				view.layer.borderWidth = 2
 				view.transform = circleView.transform
 				squareView.addSubview(view)
-				UIView.animateWithDuration(1, delay: NSTimeInterval(i) * delayUnit, options: [], animations: {
-					view.transform = CGAffineTransformIdentity
+				UIView.animate(withDuration: 1, delay: TimeInterval(i) * delayUnit, options: [], animations: {
+					view.transform = CGAffineTransform.identity
 					view.alpha = 0
 				}, completion: { (_) in
 					view.removeFromSuperview()
